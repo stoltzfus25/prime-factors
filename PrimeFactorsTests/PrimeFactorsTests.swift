@@ -21,7 +21,7 @@ class PrimeFactorsTests: XCTestCase {
         super.tearDown()
     }
     
-    func test_one_noPrimes() {
+    func test_one_returnsNoPrimes() {
         XCTAssertEqual([], sut.getPrimes(from: 1))
     }
     

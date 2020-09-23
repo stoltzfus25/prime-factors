@@ -9,6 +9,7 @@ public class PrimeFactors {
     public init() { }
     
     public func getPrimes(from number: Int) -> [Int] {
-        return number == 2 ? [2] : []
+        let primes = number == 2 ? [2] : []
+        return primes
     }
 }
