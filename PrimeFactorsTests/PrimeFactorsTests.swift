@@ -28,4 +28,8 @@ class PrimeFactorsTests: XCTestCase {
     func test_two_returnsTwo() {
         XCTAssertEqual([2], sut.getPrimes(from: 2))
     }
+    
+    func test_three_returnsThree() {
+        XCTAssertEqual([3], sut.getPrimes(from: 3))
+    }
 }
