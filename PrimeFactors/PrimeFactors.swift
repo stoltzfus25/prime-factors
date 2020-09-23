@@ -25,7 +25,9 @@ public class PrimeFactors {
             }
         }
         
-        factors.append(n)
+        if n > 1 {
+            factors.append(n)
+        }
         
         return factors
     }
