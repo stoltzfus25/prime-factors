@@ -60,4 +60,10 @@ class PrimeFactorsTests: XCTestCase {
     func test_13860_returnsTwoTwoThreeThreeFiveSevenEleven() {
         XCTAssertEqual([2, 2, 3, 3, 5, 7, 11], sut.getPrimes(from: 13860))
     }
+
+    func test_performance() {
+        measure {
+            _ = sut.getPrimes(from: Int.max)
+        }
+    }
 }
