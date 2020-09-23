@@ -5,30 +5,21 @@
 //  Created by Samuel Stoltzfus on 9/23/20.
 //
 
+import Foundation
+
 public class PrimeFactors {
     public init() { }
     
     public func getPrimes(from number: Int) -> [Int] {
-        guard number > 1 else { return [] }
-        guard number > 3 else { return [number] }
+        if number < 2 { return [] }
+        if number < 4 { return [number] }
         
-        var n = number
-        var divisor = 2
-        var factors = [Int]()
-        
-        while n > 3 {
-            if n % divisor == 0 {
-                n /= divisor
-                factors.append(divisor)
-            } else {
-                divisor += 1
+        for i in 2...Int(sqrt(Double(number))) {
+            if number % i == 0 {
+                return [i] + getPrimes(from: number / i)
             }
         }
         
-        if n > 1 {
-            factors.append(n)
-        }
-        
-        return factors
+        return [number]
     }
 }
