@@ -48,4 +48,8 @@ class PrimeFactorsTests: XCTestCase {
     func test_seven_returnsSeven() {
         XCTAssertEqual([7], sut.getPrimes(from: 7))
     }
+    
+    func test_eight_returnsTwoAndTwoAndTwo() {
+        XCTAssertEqual([2, 2, 2], sut.getPrimes(from: 8))
+    }
 }
